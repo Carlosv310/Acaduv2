@@ -61,6 +61,11 @@ class UsersRecord extends FirestoreRecord {
   int get englishpoints => _englishpoints ?? 0;
   bool hasEnglishpoints() => _englishpoints != null;
 
+  // "readingpoints" field.
+  int? _readingpoints;
+  int get readingpoints => _readingpoints ?? 0;
+  bool hasReadingpoints() => _readingpoints != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -71,6 +76,7 @@ class UsersRecord extends FirestoreRecord {
     _gradelevel = castToType<int>(snapshotData['gradelevel']);
     _mathpoints = castToType<int>(snapshotData['mathpoints']);
     _englishpoints = castToType<int>(snapshotData['englishpoints']);
+    _readingpoints = castToType<int>(snapshotData['readingpoints']);
   }
 
   static CollectionReference get collection =>
@@ -116,6 +122,7 @@ Map<String, dynamic> createUsersRecordData({
   int? gradelevel,
   int? mathpoints,
   int? englishpoints,
+  int? readingpoints,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -128,6 +135,7 @@ Map<String, dynamic> createUsersRecordData({
       'gradelevel': gradelevel,
       'mathpoints': mathpoints,
       'englishpoints': englishpoints,
+      'readingpoints': readingpoints,
     }.withoutNulls,
   );
 
@@ -147,7 +155,8 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.phoneNumber == e2?.phoneNumber &&
         e1?.gradelevel == e2?.gradelevel &&
         e1?.mathpoints == e2?.mathpoints &&
-        e1?.englishpoints == e2?.englishpoints;
+        e1?.englishpoints == e2?.englishpoints &&
+        e1?.readingpoints == e2?.readingpoints;
   }
 
   @override
@@ -160,7 +169,8 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.phoneNumber,
         e?.gradelevel,
         e?.mathpoints,
-        e?.englishpoints
+        e?.englishpoints,
+        e?.readingpoints
       ]);
 
   @override

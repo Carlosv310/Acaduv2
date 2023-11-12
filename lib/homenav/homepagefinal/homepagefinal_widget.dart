@@ -159,7 +159,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 0.0, 0.0),
                                     child: Text(
-                                      'Questions are worth 100 pts!',
+                                      'Questions are worth 50 pts!',
                                       style: FlutterFlowTheme.of(context)
                                           .headlineSmall
                                           .override(
@@ -218,6 +218,18 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                               children: [
                                                 FFButtonWidget(
                                                   onPressed: () async {
+                                                    await currentUserReference!
+                                                        .update({
+                                                      ...mapToFirestore(
+                                                        {
+                                                          'mathpoints':
+                                                              FieldValue
+                                                                  .increment(
+                                                                      -(25)),
+                                                        },
+                                                      ),
+                                                    });
+
                                                     context.pushNamed(
                                                         'WrongpageM');
                                                   },
@@ -260,7 +272,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                           'mathpoints':
                                                               FieldValue
                                                                   .increment(
-                                                                      25),
+                                                                      50),
                                                         },
                                                       ),
                                                     });
@@ -438,7 +450,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                           'mathpoints':
                                                               FieldValue
                                                                   .increment(
-                                                                      25),
+                                                                      50),
                                                         },
                                                       ),
                                                     });
@@ -706,8 +718,6 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                 ),
                                                 FFButtonWidget(
                                                   onPressed: () async {
-                                                    context.pushNamed('MathA3');
-
                                                     await currentUserReference!
                                                         .update({
                                                       ...mapToFirestore(
@@ -715,10 +725,12 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                           'mathpoints':
                                                               FieldValue
                                                                   .increment(
-                                                                      25),
+                                                                      50),
                                                         },
                                                       ),
                                                     });
+
+                                                    context.pushNamed('MathA3');
                                                   },
                                                   text: '8',
                                                   options: FFButtonOptions(
@@ -882,7 +894,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                           'mathpoints':
                                                               FieldValue
                                                                   .increment(
-                                                                      25),
+                                                                      50),
                                                         },
                                                       ),
                                                     });
@@ -1086,7 +1098,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                           'mathpoints':
                                                               FieldValue
                                                                   .increment(
-                                                                      25),
+                                                                      50),
                                                         },
                                                       ),
                                                     });
@@ -1360,7 +1372,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                           'mathpoints':
                                                               FieldValue
                                                                   .increment(
-                                                                      25),
+                                                                      50),
                                                         },
                                                       ),
                                                     });
@@ -1529,7 +1541,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                           'mathpoints':
                                                               FieldValue
                                                                   .increment(
-                                                                      25),
+                                                                      50),
                                                         },
                                                       ),
                                                     });
@@ -1768,7 +1780,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                           'mathpoints':
                                                               FieldValue
                                                                   .increment(
-                                                                      25),
+                                                                      50),
                                                         },
                                                       ),
                                                     });
@@ -1972,7 +1984,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                           'mathpoints':
                                                               FieldValue
                                                                   .increment(
-                                                                      25),
+                                                                      50),
                                                         },
                                                       ),
                                                     });
@@ -2106,7 +2118,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                           'mathpoints':
                                                               FieldValue
                                                                   .increment(
-                                                                      25),
+                                                                      50),
                                                         },
                                                       ),
                                                     });
@@ -2339,6 +2351,18 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                 ),
                                                 FFButtonWidget(
                                                   onPressed: () async {
+                                                    await currentUserReference!
+                                                        .update({
+                                                      ...mapToFirestore(
+                                                        {
+                                                          'mathpoints':
+                                                              FieldValue
+                                                                  .increment(
+                                                                      50),
+                                                        },
+                                                      ),
+                                                    });
+
                                                     context
                                                         .pushNamed('MathA11');
                                                   },
@@ -2427,6 +2451,18 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                               children: [
                                                 FFButtonWidget(
                                                   onPressed: () async {
+                                                    await currentUserReference!
+                                                        .update({
+                                                      ...mapToFirestore(
+                                                        {
+                                                          'mathpoints':
+                                                              FieldValue
+                                                                  .increment(
+                                                                      50),
+                                                        },
+                                                      ),
+                                                    });
+
                                                     context
                                                         .pushNamed('MathA12');
                                                   },
@@ -2690,6 +2726,18 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                 ),
                                                 FFButtonWidget(
                                                   onPressed: () async {
+                                                    await currentUserReference!
+                                                        .update({
+                                                      ...mapToFirestore(
+                                                        {
+                                                          'mathpoints':
+                                                              FieldValue
+                                                                  .increment(
+                                                                      50),
+                                                        },
+                                                      ),
+                                                    });
+
                                                     context
                                                         .pushNamed('MathA13');
                                                   },
@@ -2778,6 +2826,18 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                               children: [
                                                 FFButtonWidget(
                                                   onPressed: () async {
+                                                    await currentUserReference!
+                                                        .update({
+                                                      ...mapToFirestore(
+                                                        {
+                                                          'mathpoints':
+                                                              FieldValue
+                                                                  .increment(
+                                                                      50),
+                                                        },
+                                                      ),
+                                                    });
+
                                                     context
                                                         .pushNamed('MathA14');
                                                   },
@@ -2971,6 +3031,18 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                               children: [
                                                 FFButtonWidget(
                                                   onPressed: () async {
+                                                    await currentUserReference!
+                                                        .update({
+                                                      ...mapToFirestore(
+                                                        {
+                                                          'mathpoints':
+                                                              FieldValue
+                                                                  .increment(
+                                                                      50),
+                                                        },
+                                                      ),
+                                                    });
+
                                                     context
                                                         .pushNamed('MathA15');
                                                   },
@@ -3199,6 +3271,18 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                 ),
                                                 FFButtonWidget(
                                                   onPressed: () async {
+                                                    await currentUserReference!
+                                                        .update({
+                                                      ...mapToFirestore(
+                                                        {
+                                                          'mathpoints':
+                                                              FieldValue
+                                                                  .increment(
+                                                                      50),
+                                                        },
+                                                      ),
+                                                    });
+
                                                     context
                                                         .pushNamed('MathA16');
                                                   },
@@ -3322,6 +3406,18 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                 ),
                                                 FFButtonWidget(
                                                   onPressed: () async {
+                                                    await currentUserReference!
+                                                        .update({
+                                                      ...mapToFirestore(
+                                                        {
+                                                          'mathpoints':
+                                                              FieldValue
+                                                                  .increment(
+                                                                      50),
+                                                        },
+                                                      ),
+                                                    });
+
                                                     context
                                                         .pushNamed('MathA17');
                                                   },
@@ -3550,6 +3646,18 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                 ),
                                                 FFButtonWidget(
                                                   onPressed: () async {
+                                                    await currentUserReference!
+                                                        .update({
+                                                      ...mapToFirestore(
+                                                        {
+                                                          'mathpoints':
+                                                              FieldValue
+                                                                  .increment(
+                                                                      50),
+                                                        },
+                                                      ),
+                                                    });
+
                                                     context
                                                         .pushNamed('MathA18');
                                                   },
@@ -3743,6 +3851,18 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                 ),
                                                 FFButtonWidget(
                                                   onPressed: () async {
+                                                    await currentUserReference!
+                                                        .update({
+                                                      ...mapToFirestore(
+                                                        {
+                                                          'mathpoints':
+                                                              FieldValue
+                                                                  .increment(
+                                                                      50),
+                                                        },
+                                                      ),
+                                                    });
+
                                                     context
                                                         .pushNamed('MathA19');
                                                   },
@@ -3901,6 +4021,18 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                 ),
                                                 FFButtonWidget(
                                                   onPressed: () async {
+                                                    await currentUserReference!
+                                                        .update({
+                                                      ...mapToFirestore(
+                                                        {
+                                                          'mathpoints':
+                                                              FieldValue
+                                                                  .increment(
+                                                                      50),
+                                                        },
+                                                      ),
+                                                    });
+
                                                     context
                                                         .pushNamed('MathA20');
                                                   },
@@ -4084,7 +4216,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   {
                                                     'englishpoints':
                                                         FieldValue.increment(
-                                                            25),
+                                                            50),
                                                   },
                                                 ),
                                               });
@@ -4235,7 +4367,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                     {
                                                       'englishpoints':
                                                           FieldValue.increment(
-                                                              25),
+                                                              50),
                                                     },
                                                   ),
                                                 });
@@ -4425,7 +4557,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                     {
                                                       'englishpoints':
                                                           FieldValue.increment(
-                                                              25),
+                                                              50),
                                                     },
                                                   ),
                                                 });
@@ -4609,6 +4741,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                             ),
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA4');
                                               },
                                               text: 'Preposition',
@@ -4756,6 +4899,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                             ),
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA5');
                                               },
                                               text: 'C.',
@@ -4839,6 +4993,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                           children: [
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA6');
                                               },
                                               text: 'A.',
@@ -5018,6 +5183,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                             ),
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA7');
                                               },
                                               text: 'B.',
@@ -5133,6 +5309,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                           children: [
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA8');
                                               },
                                               text: 'A.',
@@ -5344,6 +5531,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                             ),
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA9');
                                               },
                                               text: 'C.',
@@ -5459,6 +5657,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                             ),
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA10');
                                               },
                                               text: 'B.',
@@ -5631,6 +5840,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                           ),
                                           FFButtonWidget(
                                             onPressed: () async {
+                                              await currentUserReference!
+                                                  .update({
+                                                ...mapToFirestore(
+                                                  {
+                                                    'englishpoints':
+                                                        FieldValue.increment(
+                                                            50),
+                                                  },
+                                                ),
+                                              });
+
                                               context.pushNamed('EnglishA11');
                                             },
                                             text: 'C.',
@@ -5775,6 +5995,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                             ),
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA12');
                                               },
                                               text: 'C.',
@@ -5858,6 +6089,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                           children: [
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA13');
                                               },
                                               text: 'A.',
@@ -6069,6 +6311,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                             ),
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA14');
                                               },
                                               text: 'C.',
@@ -6184,6 +6437,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                             ),
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA15');
                                               },
                                               text: 'B.',
@@ -6299,6 +6563,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                           children: [
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA16');
                                               },
                                               text: 'A.',
@@ -6510,6 +6785,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                             ),
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA17');
                                               },
                                               text: 'C.',
@@ -6625,6 +6911,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                             ),
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA18');
                                               },
                                               text: 'B.',
@@ -6772,6 +7069,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                             ),
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA19');
                                               },
                                               text: 'B.',
@@ -6887,6 +7195,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                           children: [
                                             FFButtonWidget(
                                               onPressed: () async {
+                                                await currentUserReference!
+                                                    .update({
+                                                  ...mapToFirestore(
+                                                    {
+                                                      'englishpoints':
+                                                          FieldValue.increment(
+                                                              50),
+                                                    },
+                                                  ),
+                                                });
+
                                                 context.pushNamed('EnglishA20');
                                               },
                                               text: 'A.',
@@ -7136,6 +7455,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA1');
                                                 },
@@ -7264,6 +7594,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   -1.00, 1.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA2');
                                                 },
@@ -7470,6 +7811,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   -1.00, 1.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA3');
                                                 },
@@ -7754,6 +8106,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA4');
                                                 },
@@ -7921,6 +8284,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA5');
                                                 },
@@ -8128,6 +8502,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA6');
                                                 },
@@ -8335,6 +8720,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA7');
                                                 },
@@ -8542,6 +8938,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA8');
                                                 },
@@ -8788,6 +9195,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA9');
                                                 },
@@ -8956,6 +9374,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA10');
                                                 },
@@ -9165,6 +9594,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                 onPressed: () async {
                                                   context
                                                       .pushNamed('ReadingA11');
+
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
                                                 },
                                                 text: 'B.',
                                                 options: FFButtonOptions(
@@ -9409,6 +9849,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA12');
                                                 },
@@ -9577,6 +10028,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA13');
                                                 },
@@ -9784,6 +10246,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA14');
                                                 },
@@ -9991,6 +10464,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA15');
                                                 },
@@ -10276,6 +10760,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA16');
                                                 },
@@ -10405,6 +10900,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA17');
                                                 },
@@ -10690,6 +11196,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA18');
                                                 },
@@ -10819,6 +11336,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   0.00, 0.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA19');
                                                 },
@@ -10987,6 +11515,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   -1.00, 1.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA20');
                                                 },
@@ -11194,6 +11733,17 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   -1.00, 1.00),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
+                                                  await currentUserReference!
+                                                      .update({
+                                                    ...mapToFirestore(
+                                                      {
+                                                        'readingpoints':
+                                                            FieldValue
+                                                                .increment(50),
+                                                      },
+                                                    ),
+                                                  });
+
                                                   context
                                                       .pushNamed('ReadingA21');
                                                 },
