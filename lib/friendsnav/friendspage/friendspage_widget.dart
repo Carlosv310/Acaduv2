@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -89,7 +88,7 @@ class _FriendspageWidgetState extends State<FriendspageWidget> {
                     ),
                 elevation: 2.0,
                 borderSide: BorderSide(
-                  color: Colors.transparent,
+                  color: FlutterFlowTheme.of(context).secondaryText,
                   width: 1.0,
                 ),
                 borderRadius: BorderRadius.circular(8.0),
@@ -192,18 +191,12 @@ class _FriendspageWidgetState extends State<FriendspageWidget> {
                 alignment: AlignmentDirectional(-1.00, 1.00),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
-                  child: AuthUserStreamWidget(
-                    builder: (context) => Text(
-                      valueOrDefault<String>(
-                        valueOrDefault(currentUserDocument?.englishpoints, 0)
-                            .toString(),
-                        '0',
-                      ),
-                      style: FlutterFlowTheme.of(context).labelMedium.override(
-                            fontFamily: 'Readex Pro',
-                            color: Color(0xFFE6585A),
-                          ),
-                    ),
+                  child: Text(
+                    'Leaderboard (coming soon...)',
+                    style: FlutterFlowTheme.of(context).labelMedium.override(
+                          fontFamily: 'Readex Pro',
+                          color: Color(0xFFE6585A),
+                        ),
                   ),
                 ),
               ),

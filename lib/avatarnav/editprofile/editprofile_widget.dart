@@ -1,10 +1,8 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/backend/firebase_storage/storage.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/upload_data.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -98,79 +96,22 @@ class _EditprofileWidgetState extends State<EditprofileWidget> {
                               fontSize: 20.0,
                             ),
                       ),
-                      InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          final selectedMedia =
-                              await selectMediaWithSourceBottomSheet(
-                            context: context,
-                            imageQuality: 70,
-                            allowPhoto: true,
-                          );
-                          if (selectedMedia != null &&
-                              selectedMedia.every((m) =>
-                                  validateFileFormat(m.storagePath, context))) {
-                            setState(() => _model.isDataUploading = true);
-                            var selectedUploadedFiles = <FFUploadedFile>[];
-
-                            var downloadUrls = <String>[];
-                            try {
-                              selectedUploadedFiles = selectedMedia
-                                  .map((m) => FFUploadedFile(
-                                        name: m.storagePath.split('/').last,
-                                        bytes: m.bytes,
-                                        height: m.dimensions?.height,
-                                        width: m.dimensions?.width,
-                                        blurHash: m.blurHash,
-                                      ))
-                                  .toList();
-
-                              downloadUrls = (await Future.wait(
-                                selectedMedia.map(
-                                  (m) async =>
-                                      await uploadData(m.storagePath, m.bytes),
-                                ),
-                              ))
-                                  .where((u) => u != null)
-                                  .map((u) => u!)
-                                  .toList();
-                            } finally {
-                              _model.isDataUploading = false;
-                            }
-                            if (selectedUploadedFiles.length ==
-                                    selectedMedia.length &&
-                                downloadUrls.length == selectedMedia.length) {
-                              setState(() {
-                                _model.uploadedLocalFile =
-                                    selectedUploadedFiles.first;
-                                _model.uploadedFileUrl = downloadUrls.first;
-                              });
-                            } else {
-                              setState(() {});
-                              return;
-                            }
-                          }
-                        },
+                      Container(
+                        width: 100.0,
+                        height: 100.0,
+                        decoration: BoxDecoration(
+                          color: FlutterFlowTheme.of(context).background,
+                        ),
                         child: Container(
-                          width: 100.0,
-                          height: 100.0,
+                          width: 120.0,
+                          height: 120.0,
+                          clipBehavior: Clip.antiAlias,
                           decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).background,
+                            shape: BoxShape.circle,
                           ),
-                          child: Container(
-                            width: 120.0,
-                            height: 120.0,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Image.network(
-                              _model.uploadedFileUrl,
-                              fit: BoxFit.cover,
-                            ),
+                          child: Image.asset(
+                            'assets/images/tempImagejPZjJb.bmp',
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
@@ -547,7 +488,6 @@ class _EditprofileWidgetState extends State<EditprofileWidget> {
                                         email: _model.newemailController.text,
                                         gradelevel: int.tryParse(
                                             _model.gradeupdateController.text),
-                                        photoUrl: _model.uploadedFileUrl,
                                       ));
 
                                       context.pushNamed('Avatarpage');

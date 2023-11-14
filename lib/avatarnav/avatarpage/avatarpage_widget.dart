@@ -182,18 +182,16 @@ class _AvatarpageWidgetState extends State<AvatarpageWidget>
                                       FlutterFlowTheme.of(context).primaryText,
                                   shape: BoxShape.circle,
                                 ),
-                                child: AuthUserStreamWidget(
-                                  builder: (context) => Container(
-                                    width: 120.0,
-                                    height: 120.0,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Image.network(
-                                      currentUserPhoto,
-                                      fit: BoxFit.cover,
-                                    ),
+                                child: Container(
+                                  width: 120.0,
+                                  height: 120.0,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Image.asset(
+                                    'assets/images/tempImagejPZjJb.bmp',
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
@@ -333,7 +331,7 @@ class _AvatarpageWidgetState extends State<AvatarpageWidget>
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'My Stats so far... (coming soon)',
+                                      'My Stats so far...',
                                       style: FlutterFlowTheme.of(context)
                                           .headlineMedium
                                           .override(

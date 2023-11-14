@@ -118,7 +118,7 @@ class _SettingspageWidgetState extends State<SettingspageWidget> {
                     children: [
                       Card(
                         clipBehavior: Clip.antiAliasWithSaveLayer,
-                        color: FlutterFlowTheme.of(context).white,
+                        color: FlutterFlowTheme.of(context).background,
                         elevation: 0.0,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
@@ -131,8 +131,8 @@ class _SettingspageWidgetState extends State<SettingspageWidget> {
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                             ),
-                            child: Image.network(
-                              currentUserPhoto,
+                            child: Image.asset(
+                              'assets/images/tempImagejPZjJb.bmp',
                               fit: BoxFit.cover,
                             ),
                           ),
