@@ -1,7 +1,10 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
@@ -255,6 +258,13 @@ class _WrongpageEWidgetState extends State<WrongpageEWidget>
                             EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 16.0),
                         child: FFButtonWidget(
                           onPressed: () async {
+                            await currentUserReference!.update({
+                              ...mapToFirestore(
+                                {
+                                  'englishpoints': FieldValue.increment(-(25)),
+                                },
+                              ),
+                            });
                             context.safePop();
                           },
                           text: 'Try Again',

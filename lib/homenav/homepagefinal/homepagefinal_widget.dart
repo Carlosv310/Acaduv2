@@ -218,18 +218,6 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                               children: [
                                                 FFButtonWidget(
                                                   onPressed: () async {
-                                                    await currentUserReference!
-                                                        .update({
-                                                      ...mapToFirestore(
-                                                        {
-                                                          'mathpoints':
-                                                              FieldValue
-                                                                  .increment(
-                                                                      -(25)),
-                                                        },
-                                                      ),
-                                                    });
-
                                                     context.pushNamed(
                                                         'WrongpageM');
                                                   },
@@ -2431,7 +2419,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                       .fromSTEB(
                                                           16.0, 0.0, 0.0, 0.0),
                                                   child: Text(
-                                                    '12. \n\nA bookstore sells hardcover books, h, for \n\$20 each and paperback, p, books for \$10 \neach. If a customer buys a total of 5 \nbooks for \$80, how many of each type \ndid they buy?\n',
+                                                    '12. \n\nA bookstore sells hardcover books, h, for \n\$20 each and paperback, p, books for \n\$10 each. If a customer buys a total of 5 \nbooks for \$80, how many of each type \ndid they buy?\n',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyLarge,
@@ -4341,7 +4329,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   .fromSTEB(
                                                       16.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                '2.\n\nChoose the word or phrase that best \ncompletes the sentence:\n\nI can\'t believe I left my phone at ______.\n\na) home\nb) it\'s\nc) its\n',
+                                                '2.\n\nChoose the word or phrase that best \ncompletes the sentence:\n\nI can\'t believe I left my phone at\n ______.\n\na) home\nb) it\'s\nc) its\n',
                                                 textAlign: TextAlign.start,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -7355,7 +7343,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   .fromSTEB(
                                                       16.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                '1. \n\nExcerpt from \"The Great Gatsby\" by \nF. Scott Fitzgerald\n\n\"It was one of those rare smiles with a \nquality of eternal reassurance in it, that \nyou may come across four or five times \nin life.\"\n\nIn the context of the passage, what \ndoes the author mean by \"those rare \nsmiles\"?\n\nA) Smiles that are common and ordinary.\nB) Smiles that are fleeting and short-lived.\nC) Smiles that bring a sense of enduring \ncomfort.\nD) Smiles that are sad and melancholic.\n',
+                                                '1. \n\nExcerpt from \"The Great Gatsby\" by \nF. Scott Fitzgerald\n\n\"It was one of those rare smiles with a \nquality of eternal reassurance in it, that \nyou may come across four or five times \nin life.\"\n\nIn the context of the passage, what \ndoes the author mean by \"those rare \nsmiles\"?\n\nA) Smiles that are common and ordinary.\nB) Smiles that are fleeting and short-\nlived.\nC) Smiles that bring a sense of enduring \ncomfort.\nD) Smiles that are sad and melancholic.\n',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -7789,7 +7777,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   .fromSTEB(
                                                       16.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                '3. \n\nExcerpt from \"Alice\'s Adventures in \nWonderland\" by Lewis Carroll\n\n\"Alice was beginning to get very tired of \nsitting by her sister on the bank, and of \nhaving nothing to do.\"\n\nWhy is Alice feeling tired in the passage?\nA) She is bored and wants something \nto do.\nB) She has been working hard all day.\nC) She is physically exhausted from a long\n journey.\nD) She is hungry and needs a rest.\n',
+                                                '3. \n\nExcerpt from \"Alice\'s Adventures in \nWonderland\" by Lewis Carroll\n\n\"Alice was beginning to get very tired of \nsitting by her sister on the bank, and of \nhaving nothing to do.\"\n\nWhy is Alice feeling tired in the passage?\nA) She is bored and wants something \nto do.\nB) She has been working hard all day.\nC) She is physically exhausted from a \nlong\n journey.\nD) She is hungry and needs a rest.\n',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -8440,7 +8428,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   .fromSTEB(
                                                       16.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                '6. \n\nExcerpt from \"The Picture of Dorian Gray\" \nby Oscar Wilde\n\n\"The only way to get rid of a temptation \nis to yield to it.\"\n\nIn the context of the passage, what does \nthe author suggest about dealing with \ntemptation?\n\nA) You should always resist temptation.\nB) You should give in to temptation.\nC) Temptation is unavoidable.\nD) Temptation can be overcome through \nwillpower.\n',
+                                                '6. \n\nExcerpt from \"The Picture of Dorian \nGray\" by Oscar Wilde\n\n\"The only way to get rid of a temptation \nis to yield to it.\"\n\nIn the context of the passage, what \ndoes the author suggest about dealing \n\\with \ntemptation?\n\nA) You should always resist temptation.\nB) You should give in to temptation.\nC) Temptation is unavoidable.\nD) Temptation can be overcome \nthrough \nwillpower.\n',
                                                 textAlign: TextAlign.start,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -8658,7 +8646,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   .fromSTEB(
                                                       16.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                '7. \n\nExcerpt from \"The Metamorphosis\" by \nFranz Kafka\n\nAs Gregor Samsa awoke one morning \nfrom uneasy dreams, he found himself \ntransformed in his bed into a gigantic \ninsect. He lay on his hard, as it were \narmor-plated, back, and when he lifted \nhis head a little, he could see his \ndomelike brown belly divided into stiff \narched segments on top of which the bed \nquilt could hardly keep in position and \nwas about to slide off completely.\n\nWhat is the central event described in \nthis passage?\n\na. Gregor Samsa\'s awakening from a \nnightmare.\nb. Gregor Samsa\'s transformation into \nan insect.\nc. Gregor Samsa\'s struggle to get out of \nbed.\nd. Gregor Samsa\'s realization of a \nphysical ailment.\n',
+                                                '7. \n\nExcerpt from \"The Metamorphosis\" by \nFranz Kafka\n\nAs Gregor Samsa awoke one morning \nfrom uneasy dreams, he found himself \ntransformed in his bed into a gigantic \ninsect. He lay on his hard, as it were \narmor-plated, back, and when he lifted \nhis head a little, he could see his \ndomelike brown belly divided into stiff \narched segments on top of which the \nbed quilt could hardly keep in position \nand \nwas about to slide off completely.\n\nWhat is the central event described in \nthis passage?\n\na. Gregor Samsa\'s awakening from a \nnightmare.\nb. Gregor Samsa\'s transformation into \nan insect.\nc. Gregor Samsa\'s struggle to get out of \nbed.\nd. Gregor Samsa\'s realization of a \nphysical ailment.\n',
                                                 textAlign: TextAlign.start,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -8876,7 +8864,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   .fromSTEB(
                                                       16.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                '8. \n\n\"A crowd of eager and curious \nschoolboys, understanding little of the \nmatter in hand, except that it gave them \na half-holiday, ran before her progress.\"\n\nWhat is the main reason the schoolboys \nare excited in this passage?\n\nA) They are eager to learn about the \nmatter at hand.\nB) They are eager for a day off from \nschool.\nC) They are curious about the protagonist.\nD) They are eager to meet the \nprotagonist.\n',
+                                                '8. \n\n\"A crowd of eager and curious \nschoolboys, understanding little of the \nmatter in hand, except that it gave them \na half-holiday, ran before her progress.\"\n\nWhat is the main reason the schoolboys \nare excited in this passage?\n\nA) They are eager to learn about the \nmatter at hand.\nB) They are eager for a day off from \nschool.\nC) They are curious about the \nprotagonist.\nD) They are eager to meet the \nprotagonist.\n',
                                                 textAlign: TextAlign.start,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -9094,7 +9082,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   .fromSTEB(
                                                       16.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                '9. \n\nExcerpt from \"The Picture of Dorian Gray\"\n by Oscar Wilde\n\n\"The only things to be relied on are those \nwhich can be counted on to be utterly \nunsatisfactory.\"\n\nIn the context of the passage, what is the \nauthor\'s viewpoint on things that are \n\"utterly unsatisfactory\"?\n\nA) They should be avoided at all costs.\nB) They can be counted on and trusted.\nC) They are often disappointing and \nunreliable.\nD) They are impossible to find.\n',
+                                                '9. \n\nExcerpt from \"The Picture of Dorian \nGray\" by Oscar Wilde\n\n\"The only things to be relied on are those \nwhich can be counted on to be utterly \nunsatisfactory.\"\n\nIn the context of the passage, what is \nthe author\'s viewpoint on things that are \n\"utterly unsatisfactory\"?\n\nA) They should be avoided at all costs.\nB) They can be counted on and trusted.\nC) They are often disappointing and \nunreliable.\nD) They are impossible to find.\n',
                                                 textAlign: TextAlign.start,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -9748,7 +9736,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   .fromSTEB(
                                                       16.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                '12. \n\nFor a century, he wandered the earth, \nseeking answers to the enigma of life. \nHis journey led him to distant lands, \nacross oceans and mountains, through \nvalleys and deserts. At last, he found \nhimself standing at the edge of the world, \ngazing into the abyss.\n\nWhat is the significance of the \nprotagonist\'s journey in this passage?\n\nA) A search for adventure and thrill\nB) An exploration of family heritage\nC) A quest for knowledge and \nunderstanding\nD) A mission to conquer the unknown\n',
+                                                '12. \n\nFor a century, he wandered the earth, \nseeking answers to the enigma of life. \nHis journey led him to distant lands, \nacross oceans and mountains, through \nvalleys and deserts. At last, he found \nhimself standing at the edge of the \nworld, gazing into the abyss.\n\nWhat is the significance of the \nprotagonist\'s journey in this passage?\n\nA) A search for adventure and thrill\nB) An exploration of family heritage\nC) A quest for knowledge and \nunderstanding\nD) A mission to conquer the unknown\n',
                                                 textAlign: TextAlign.start,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -9966,7 +9954,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   .fromSTEB(
                                                       16.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                '13. \n\nAs the storm raged outside, I clutched \nthe cursed object in my trembling hands. \nIt held the power to change the course \nof history, and yet, it was a double-edged \nsword. The decision weighed heavily on \nmy conscience.\n\nAs she is driven by love, what is the \ncentral conflict presented in \nthis passage?\n\nA) A battle against nature\'s forces\nB) A struggle with internal demons\nC) A moral dilemma about using a \npowerful object\nD) A quest for redemption and \nforgiveness\n',
+                                                '13. \n\nAs the storm raged outside, I clutched \nthe cursed object in my trembling hands. \nIt held the power to change the course \nof history, and yet, it was a double-\nedged sword. The decision weighed \nheavily on my conscience.\n\nAs she is driven by love, what is the \ncentral conflict presented in \nthis passage?\n\nA) A battle against nature\'s forces\nB) A struggle with internal demons\nC) A moral dilemma about using a \npowerful object\nD) A quest for redemption and \nforgiveness\n',
                                                 textAlign: TextAlign.start,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -10838,7 +10826,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   .fromSTEB(
                                                       16.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                '17. \n\nExcerpt from \"Moby-Dick\" by Herman \nMelville\n\n\"Call me Ishmael. Some years ago—never \nmind how long precisely—having little or \nno money in my purse, and nothing \nparticular to interest me on shore, I \nthought I would sail about a little and \nsee the watery part of the world.\"\n\nHow does the narrator\'s financial situation \ncontribute to his decision to go to sea?\n\na. It reflects his desperation to escape his \ncircumstances.\nb. It highlights his adventurous spirit.\nc. It indicates a desire for material \nwealth.\nd. It symbolizes a rejection of societal \nnorms.\n',
+                                                '17. \n\nExcerpt from \"Moby-Dick\" by Herman \nMelville\n\n\"Call me Ishmael. Some years ago—\nnever mind how long precisely—having \nlittle or no money in my purse, and \nnothing particular to interest me on \nshore, I thought I would sail about a \nlittle and see the watery part of the \nworld.\"\n\nHow does the narrator\'s financial \nsituation contribute to his decision to\n go to sea?\n\na. It reflects his desperation to escape \nhis circumstances.\nb. It highlights his adventurous spirit.\nc. It indicates a desire for material \nwealth.\nd. It symbolizes a rejection of societal \nnorms.\n',
                                                 textAlign: TextAlign.start,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -11274,7 +11262,7 @@ class _HomepagefinalWidgetState extends State<HomepagefinalWidget>
                                                   .fromSTEB(
                                                       16.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                '19. \n\n\nExcerpt from \"1984\" by George Orwell\n\nIt was a bright cold day in April, and the \nclocks were striking thirteen. Winston \nSmith, his chin nuzzled into his breast in \nan effort to escape the vile wind, slipped \nquickly through the glass doors of Victory \nMansions, though not quickly enough to \nprevent a swirl of gritty dust from \nentering along with him.\n\nHow does the description of Winston \nSmith\'s entrance into Victory Mansions \ncontribute to the atmosphere of the \npassage?\n\na. It conveys a sense of comfort and \nwarmth.\nb. It creates a feeling of foreboding \nand discomfort.\nc. It implies a moment of triumph and \nvictory.\nd. It suggests a carefree and leisurely \nenvironment.\n',
+                                                '19. \n\n\nExcerpt from \"1984\" by George Orwell\n\nIt was a bright cold day in April, and the \nclocks were striking thirteen. Winston \nSmith, his chin nuzzled into his breast in \nan effort to escape the vile wind, slipped \nquickly through the glass doors of \nVictory Mansions, though not quickly \nenough to prevent a swirl of gritty dust \nfrom entering along with him.\n\nHow does the description of Winston \nSmith\'s entrance into Victory Mansions \ncontribute to the atmosphere of the \npassage?\n\na. It conveys a sense of comfort and \nwarmth.\nb. It creates a feeling of foreboding \nand discomfort.\nc. It implies a moment of triumph and \nvictory.\nd. It suggests a carefree and leisurely \nenvironment.\n',
                                                 textAlign: TextAlign.start,
                                                 style:
                                                     FlutterFlowTheme.of(context)
